@@ -1,0 +1,109 @@
+/* general CSS */ 
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0px;
+    overflow-wrap: none;
+    margin: 10px 0px;
+}
+
+head, h1{
+    background-color: #a3201c;
+    color: white;
+    margin: 2px;
+    padding: 5px;
+}
+ul{
+    background-color: grey;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li{
+    float: left;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.Small Section{
+    display: flex;
+    color: black;
+    text-align: center;
+    flex-direction: column;
+    margin: 10px;
+    float: left;
+}
+
+.Section{
+    flex-direction: column;
+    display: flex;
+    color: black;
+    text-align: center;
+    margin: 10px;
+    float: left;
+}
+
+select{
+    margin: 2px;
+}
+
+h4{
+    margin: 2px;
+}
+
+button{
+    margin: 2px;
+}
+
+
+/* Desktop layout */
+@media screen and (min-width: 999px){
+h1 {
+    font-size: 250%;
+}
+.BigSection{
+    flex-direction: column;
+}
+}
+
+/* Tablet layout */
+@media only screen and (max-width: 998px) and (min-width: 400px){
+.Section{
+    align-content: center;
+    justify-content: center;
+}
+h1{
+    font-size: 200%;
+}
+}
+
+/* Phone layout */
+@media only screen and (max-width: 399px){
+h1{
+    text-align: center;
+}
+li{
+    float: center;
+}
+div{
+    max-width: 350px;
+}  
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+input{
+    width: 90%;
+}
+h1{
+    font-size: 150%
+}
+}

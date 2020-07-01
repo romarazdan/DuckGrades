@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DuckGrades</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Styles.CSS">
+    </head>
+    <body>
+        <h1>DuckGrades</h1>
+        <form action="/action_page.php">
+        <ul>
+            <li><a href = "Index.html">Home</a></li>
+            <li><a href = "About.html">About</a></li> 
+            </ul>
+        <div class = "Big Section">
+        <div class = "Section">
+        <div class = "Small Section">
+            <h4>Add a Category</h4>
+            <button onclick="AddCat()" type="button">+ Add Category</button> 
+            <p>New Category Name: <input id="cName"type="text" name="Category Name" value="Category 1"></p>
+            <h4>Edit a Subcategory</h4>
+            <select id="CatSelect">
+            </select>
+            
+            <button onclick="AddSub()"type="button">+ Edit Subcategory of Selected Category</button>
+            <p>Subcategory: <select id="sName">
+                    <option value="Homework">Homework</option>
+                    <option value="Quizzes">Quizzes</option>
+                    <option value="Tests">Tests</option>
+                    <option value="Midterms">Midterms</option>
+                    <option value="Finals">Finals</option>
+                    <option value="Presentations">Presentations</option>
+                    <option value="Group Work">Group Work</option>
+                    <option value="Essays">Essays</option>
+                </select>   Subcategory Weight: <input type = "number" min="0" max="100" id = "sWeight" name="Subcategory Weight" value="0"></p>
+            </div>
+            <div class = "Small Section">
+            <h4>Add an Assignment</h4>
+            <select id="CatSelect2">
+            </select>
+            <select id="SubcatSelect">
+                <option value="Homework">Homework</option>
+                <option value="Quizzes">Quizzes</option>
+                <option value="Tests">Tests</option>
+                <option value="Midterms">Midterms</option>
+                <option value="Finals">Finals</option>
+                <option value="Presentations">Presentations</option>
+                <option value="Group Work">Group Work</option>
+                <option value="Essays">Essays</option>
+            </select>
+            <button onclick="AddAssign()" type="button">+ Add Assignment to Selected Category</button>
+            <p>New Assignment Name: <input id = "aName" type="text" name="Assignment Name" value="Assignment"> Grade: <input min = "0" id = "aVal" type="number" name="Assignment Grade" value="0"></p>
+            </div>
+            
+        <div class = "Section" id = "PattyHill">
+          
+    </div>
+    <div class ="Section">
+        <button onclick="Subby()" type="button"> Calculate Average </button> 
+        <h3 id = "Average"></h3>
+        <p id = "CatAvgs"></p>
+    </div>
+</div>
+        </form>
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
+</html>
